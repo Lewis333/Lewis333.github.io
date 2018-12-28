@@ -229,6 +229,312 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/28/HTTP介绍-1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leiws">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lewis first blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/28/HTTP介绍-1/" itemprop="url">HTTP介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T21:34:55+08:00">
+                2018-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/28/HTTP介绍/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leiws">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lewis first blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/28/HTTP介绍/" itemprop="url">HTTP介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T20:56:47+08:00">
+                2018-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>HTTP请求包括哪些部分<br>请求行<br>　　求方法字段、URL字段和HTTP协议版本<br>　　例如：GET /index.html HTTP/1.1<br>   get方法将数据拼接在url后面，传递参数受限<br>   请求方法：<br>   GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT<br>请求头(key value形式)<br>   User-Agent：产生请求的浏览器类型。<br>   Accept：客户端可识别的内容类型列表。<br>   Host：主机地址<br>请求数据<br>   post方法中，会把数据以key value形式发送请求<br>   空行<br>   发送回车符和换行符，通知服务器以下不再有请求头<br>用Chrome开发者工具查看 HTTP 请求内容<br>按F12打开 Network<br>   地址栏输入网址<br>   在 Network 点击，查看 request，点击「view source」<br>   可以看到请求的前三部分了<br>HTTP 响应包括哪些部分<br>1 协议/版本号 状态码 状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容<br>如何用Chrome开发者工具查看 HTTP 响应内容<br>打开 Network<br>输入网址<br>选中第一个响应<br>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」<br>你会看到响应的前两部分<br>查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
+<p>如何使用 curl 命令<br>curl命令详解<br>（1）curl命令作用</p>
+<pre><code>curl命令是一个功能强大的网络工具，它能够通过http、ftp等方式下载文件，也能够上传文件，同时支持HTTPS等众多协议，还支持POST、cookies、认证、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。其实curl远不止前面所说的那些功能，大家可以通过man curl阅读手册页获取更多的信息。类似的工具还有wget。curl命令使用了libcurl库来实现，libcurl库常用在C程序中用来处理HTTP请求，curlpp是libcurl的一个C++封装，这几个东西可以用在抓取网页、网络监控等方面的开发，而curl命令可以帮助来解决开发过程中遇到的问题。
+</code></pre><p>（2）常用参数</p>
+<pre><code>curl命令参数很多，这里只列出我曾经用过、特别是在shell脚本中经常用到过的那些。
+</code></pre><p>-a/–append 上传文件时，附加到目标文件</p>
+<p>-A:随意指定自己这次访问所宣称的自己的浏览器信息</p>
+<p>-b/–cookie &lt;name=string/file&gt; cookie字符串或文件读取位置，使用option来把上次的cookie信息追加到http request里面去。</p>
+<p>-c/–cookie-jar <file> 操作结束后把cookie写入到这个文件中</file></p>
+<p>-C/–continue-at <offset>  断点续转</offset></p>
+<p>-d/–data <data>   HTTP POST方式传送数据</data></p>
+<pre><code>--data-ascii &lt;data&gt;    以ascii的方式post数据
+ --data-binary &lt;data&gt;    以二进制的方式post数据
+ --negotiate    使用HTTP身份验证
+ --digest    使用数字身份验证
+ --disable-eprt    禁止使用EPRT或LPRT
+ --disable-epsv    禁止使用EPSV
+</code></pre><p>-D/–dump-header <file> 把header信息写入到该文件中</file></p>
+<pre><code>--egd-file &lt;file&gt;  为随机数据(SSL)设置EGD socket路径
+
+--tcp-nodelay     使用TCP_NODELAY选项
+</code></pre><p>-e/–referer <url>  指定引用地址</url></p>
+<p>-F/–form &lt;name=content&gt;   模拟http表单提交数据</p>
+<pre><code>--form-string &lt;name=string&gt; 模拟http表单提交数据
+</code></pre><p>-G/–get    以get的方式来发送数据</p>
+<p>-H/–header <header> 指定请求头参数</header></p>
+<pre><code>--ignore-content-length  忽略的HTTP头信息的长度
+</code></pre><p>-i/–include     输出时包括protocol头信息</p>
+<p>-I/–head 仅返回头部信息，使用HEAD请求</p>
+<p>-k/–insecure  允许不使用证书到SSL站点</p>
+<p>-K/–config    指定的配置文件读取</p>
+<p>-l/–list-only   列出ftp目录下的文件名称</p>
+<pre><code>--limit-rate &lt;rate&gt; 设置传输速度
+
+ --local-port&lt;NUM&gt;  强制使用本地端口号
+</code></pre><p>-m/–max-time <seconds> 指定处理的最大时长</seconds></p>
+<pre><code>--max-redirs &lt;num&gt;    设置最大读取的目录数
+
+--max-filesize &lt;bytes&gt;  设置最大下载的文件总量
+</code></pre><p>-o/–output <file>   指定输出文件名称</file></p>
+<p>-O/–remote-name  把输出写到该文件中，保留远程文件的文件名</p>
+<p>-v/–verbose  小写的v参数，用于打印更多信息，包括发送的请求信息，这在调试脚本是特别有用。</p>
+<p>-s/–slient 减少输出的信息，比如进度</p>
+<p>–connect-timeout <seconds> 指定尝试连接的最大时长</seconds></p>
+<p>-x/–proxy &lt;proxyhost[:port]&gt; 指定代理服务器地址和端口，端口默认为1080<br>-u/–user &lt;user[:password]&gt;设置服务器的用户和密码</p>
+<p>-r/–range <range>检索来自HTTP/1.1或FTP服务器字节范围</range></p>
+<p>   –range-file 读取（SSL）的随机文件</p>
+<p>-R/–remote-time   在本地生成文件时，保留远程文件时间</p>
+<pre><code>--retry &lt;num&gt;   指定重试次数
+
+--retry-delay &lt;seconds&gt;   传输出现问题时，设置重试间隔时间
+
+--retry-max-time &lt;seconds&gt;  传输出现问题时，设置最大重试时间
+</code></pre><p>-s/–silent  静默模式。不输出任何东西</p>
+<p>-S/–show-error  显示错误</p>
+<pre><code>--socks4 &lt;host[:port]&gt; 用socks4代理给定主机和端口
+
+--socks5 &lt;host[:port]&gt; 用socks5代理给定主机和端口
+
+--stderr &lt;file&gt;
+</code></pre><p>-x/–proxy &lt;host[:port]&gt; 在给定的端口上使用HTTP代理</p>
+<p>-X/–request <command> 指定什么命令。curl默认的HTTP动词是GET，使用-X参数可以支持其他动词。</p>
+<p>-T/–upload-file <file> 指定上传文件路径</file></p>
+<p>（3）使用实例</p>
+<p>1、抓取cokkie信息到一个文件中</p>
+<p>curl -c cookie0.txt -d “username=<strong>*<em>&amp;password=</em></strong>“ <a href="http://www.kuaipan.cn/accounts/login/" target="_blank" rel="noopener">http://www.kuaipan.cn/accounts/login/</a></p>
+<p>2、get方法获取信息</p>
+<p>curl -G -I -o xsrf.txt -b cookie1.txt -c cookie2.txt <a href="http://web.kuaipan.cn/n/drive/home.tmpl/upload" target="_blank" rel="noopener">http://web.kuaipan.cn/n/drive/home.tmpl/upload</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/基本命令行/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -633,7 +939,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -646,7 +952,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

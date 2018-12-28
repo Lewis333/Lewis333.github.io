@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="the introduction of HTTP,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="ls [-alrtAFR] [name…]-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为”.”的视为隐藏档，不会列出)-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出-r 将文件以相反次序显示(原定依英文字母次序)-t 将文件依建立时间之先后次序列出-A 同 -a ，但不列出 “.” (目前目录) 及 “..” (父目录)-F 在列出的文件名称后加一符号；例如可">
+<meta name="description" content="HTTP请求包括哪些部分请求行　　求方法字段、URL字段和HTTP协议版本　　例如：GET /index.html HTTP/1.1   get方法将数据拼接在url后面，传递参数受限   请求方法：   GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT请求头(key value形式)   User-Agent：产生请求的浏览器类型。   Accept：">
+<meta name="keywords" content="the introduction of HTTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本命令行">
-<meta property="og:url" content="http://yoursite.com/2018/12/18/基本命令行/index.html">
+<meta property="og:title" content="HTTP介绍">
+<meta property="og:url" content="http://yoursite.com/2018/12/28/HTTP介绍/index.html">
 <meta property="og:site_name" content="lewis first blog">
-<meta property="og:description" content="ls [-alrtAFR] [name…]-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为”.”的视为隐藏档，不会列出)-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出-r 将文件以相反次序显示(原定依英文字母次序)-t 将文件依建立时间之先后次序列出-A 同 -a ，但不列出 “.” (目前目录) 及 “..” (父目录)-F 在列出的文件名称后加一符号；例如可">
+<meta property="og:description" content="HTTP请求包括哪些部分请求行　　求方法字段、URL字段和HTTP协议版本　　例如：GET /index.html HTTP/1.1   get方法将数据拼接在url后面，传递参数受限   请求方法：   GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT请求头(key value形式)   User-Agent：产生请求的浏览器类型。   Accept：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-18T13:47:32.107Z">
+<meta property="og:updated_time" content="2018-12-28T13:27:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基本命令行">
-<meta name="twitter:description" content="ls [-alrtAFR] [name…]-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为”.”的视为隐藏档，不会列出)-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出-r 将文件以相反次序显示(原定依英文字母次序)-t 将文件依建立时间之先后次序列出-A 同 -a ，但不列出 “.” (目前目录) 及 “..” (父目录)-F 在列出的文件名称后加一符号；例如可">
+<meta name="twitter:title" content="HTTP介绍">
+<meta name="twitter:description" content="HTTP请求包括哪些部分请求行　　求方法字段、URL字段和HTTP协议版本　　例如：GET /index.html HTTP/1.1   get方法将数据拼接在url后面，传递参数受限   请求方法：   GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT请求头(key value形式)   User-Agent：产生请求的浏览器类型。   Accept：">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/18/基本命令行/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/28/HTTP介绍/">
 
 
 
 
 
-  <title>基本命令行 | lewis first blog</title>
+  <title>HTTP介绍 | lewis first blog</title>
   
 
 
@@ -232,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/基本命令行/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/28/HTTP介绍/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leiws">
@@ -249,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">基本命令行</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP介绍</h1>
         
 
         <div class="post-meta">
@@ -261,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-18T21:42:31+08:00">
-                2018-12-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T20:56:47+08:00">
+                2018-12-28
               </time>
             
 
@@ -299,10 +300,74 @@
       
 
       
-        <p>ls [-alrtAFR] [name…]<br>-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为”.”的视为隐藏档，不会列出)<br>-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出<br>-r 将文件以相反次序显示(原定依英文字母次序)<br>-t 将文件依建立时间之先后次序列出<br>-A 同 -a ，但不列出 “.” (目前目录) 及 “..” (父目录)<br>-F 在列出的文件名称后加一符号；例如可执行档则加 “*”, 目录则加 “/“<br>-R 若目录下有文件，则以下之文件亦皆依序列出</p>
-<p>cat [-AbeEnstTuv] [–help] [–version] fileName<br>-n 或 –number：由 1 开始对所有输出的行数编号。<br>-b 或 –number-nonblank：和 -n 相似，只不过对于空白行不编号。<br>-s 或 –squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。<br>-v 或 –show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。<br>-E 或 –show-ends : 在每行结束处显示 $。<br>-T 或 –show-tabs: 将 TAB 字符显示为 ^I。<br>-A, –show-all：等价于 -vET。<br>-e：等价于”-vE”选项；<br>-t：等价于”-vT”选项；</p>
-<p>mv [options] source dest<br>mv [options] source… directory<br>-i: 若指定目录已有同名文件，则先询问是否覆盖旧文件;<br>-f: 在mv操作要覆盖某已有的目标文件时不给任何指示;</p>
-<p>touch [-acfm][-d&lt;日期时间&gt;][-r&lt;参考文件或目录&gt;] [-t&lt;日期时间&gt;][–help][–version][文件或目录…]<br>a 改变档案的读取时间记录。<br>m 改变档案的修改时间记录。<br>c 假如目的档案不存在，不会建立新的档案。与 –no-create 的效果一样。<br>f 不使用，是为了与其他 unix 系统的相容性而保留。<br>r 使用参考档的时间记录，与 –file 的效果一样。<br>d 设定时间与日期，可以使用各种不同的格式。<br>t 设定档案的时间记录，格式与 date 指令相同。<br>–no-create 不会建立新档案。<br>–help 列出指令格式。<br>–version 列出版本讯息。</p>
+        <p>HTTP请求包括哪些部分<br>请求行<br>　　求方法字段、URL字段和HTTP协议版本<br>　　例如：GET /index.html HTTP/1.1<br>   get方法将数据拼接在url后面，传递参数受限<br>   请求方法：<br>   GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT<br>请求头(key value形式)<br>   User-Agent：产生请求的浏览器类型。<br>   Accept：客户端可识别的内容类型列表。<br>   Host：主机地址<br>请求数据<br>   post方法中，会把数据以key value形式发送请求<br>   空行<br>   发送回车符和换行符，通知服务器以下不再有请求头<br>用Chrome开发者工具查看 HTTP 请求内容<br>按F12打开 Network<br>   地址栏输入网址<br>   在 Network 点击，查看 request，点击「view source」<br>   可以看到请求的前三部分了<br>HTTP 响应包括哪些部分<br>1 协议/版本号 状态码 状态解释<br>2 Key1: value1<br>2 Key2: value2<br>2 Content-Length: 17931<br>2 Content-Type: text/html<br>3<br>4 要下载的内容<br>如何用Chrome开发者工具查看 HTTP 响应内容<br>打开 Network<br>输入网址<br>选中第一个响应<br>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」<br>你会看到响应的前两部分<br>查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
+<p>如何使用 curl 命令<br>curl命令详解<br>（1）curl命令作用</p>
+<pre><code>curl命令是一个功能强大的网络工具，它能够通过http、ftp等方式下载文件，也能够上传文件，同时支持HTTPS等众多协议，还支持POST、cookies、认证、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。其实curl远不止前面所说的那些功能，大家可以通过man curl阅读手册页获取更多的信息。类似的工具还有wget。curl命令使用了libcurl库来实现，libcurl库常用在C程序中用来处理HTTP请求，curlpp是libcurl的一个C++封装，这几个东西可以用在抓取网页、网络监控等方面的开发，而curl命令可以帮助来解决开发过程中遇到的问题。
+</code></pre><p>（2）常用参数</p>
+<pre><code>curl命令参数很多，这里只列出我曾经用过、特别是在shell脚本中经常用到过的那些。
+</code></pre><p>-a/–append 上传文件时，附加到目标文件</p>
+<p>-A:随意指定自己这次访问所宣称的自己的浏览器信息</p>
+<p>-b/–cookie &lt;name=string/file&gt; cookie字符串或文件读取位置，使用option来把上次的cookie信息追加到http request里面去。</p>
+<p>-c/–cookie-jar <file> 操作结束后把cookie写入到这个文件中</file></p>
+<p>-C/–continue-at <offset>  断点续转</offset></p>
+<p>-d/–data <data>   HTTP POST方式传送数据</data></p>
+<pre><code>--data-ascii &lt;data&gt;    以ascii的方式post数据
+ --data-binary &lt;data&gt;    以二进制的方式post数据
+ --negotiate    使用HTTP身份验证
+ --digest    使用数字身份验证
+ --disable-eprt    禁止使用EPRT或LPRT
+ --disable-epsv    禁止使用EPSV
+</code></pre><p>-D/–dump-header <file> 把header信息写入到该文件中</file></p>
+<pre><code>--egd-file &lt;file&gt;  为随机数据(SSL)设置EGD socket路径
+
+--tcp-nodelay     使用TCP_NODELAY选项
+</code></pre><p>-e/–referer <url>  指定引用地址</url></p>
+<p>-F/–form &lt;name=content&gt;   模拟http表单提交数据</p>
+<pre><code>--form-string &lt;name=string&gt; 模拟http表单提交数据
+</code></pre><p>-G/–get    以get的方式来发送数据</p>
+<p>-H/–header <header> 指定请求头参数</header></p>
+<pre><code>--ignore-content-length  忽略的HTTP头信息的长度
+</code></pre><p>-i/–include     输出时包括protocol头信息</p>
+<p>-I/–head 仅返回头部信息，使用HEAD请求</p>
+<p>-k/–insecure  允许不使用证书到SSL站点</p>
+<p>-K/–config    指定的配置文件读取</p>
+<p>-l/–list-only   列出ftp目录下的文件名称</p>
+<pre><code>--limit-rate &lt;rate&gt; 设置传输速度
+
+ --local-port&lt;NUM&gt;  强制使用本地端口号
+</code></pre><p>-m/–max-time <seconds> 指定处理的最大时长</seconds></p>
+<pre><code>--max-redirs &lt;num&gt;    设置最大读取的目录数
+
+--max-filesize &lt;bytes&gt;  设置最大下载的文件总量
+</code></pre><p>-o/–output <file>   指定输出文件名称</file></p>
+<p>-O/–remote-name  把输出写到该文件中，保留远程文件的文件名</p>
+<p>-v/–verbose  小写的v参数，用于打印更多信息，包括发送的请求信息，这在调试脚本是特别有用。</p>
+<p>-s/–slient 减少输出的信息，比如进度</p>
+<p>–connect-timeout <seconds> 指定尝试连接的最大时长</seconds></p>
+<p>-x/–proxy &lt;proxyhost[:port]&gt; 指定代理服务器地址和端口，端口默认为1080<br>-u/–user &lt;user[:password]&gt;设置服务器的用户和密码</p>
+<p>-r/–range <range>检索来自HTTP/1.1或FTP服务器字节范围</range></p>
+<p>   –range-file 读取（SSL）的随机文件</p>
+<p>-R/–remote-time   在本地生成文件时，保留远程文件时间</p>
+<pre><code>--retry &lt;num&gt;   指定重试次数
+
+--retry-delay &lt;seconds&gt;   传输出现问题时，设置重试间隔时间
+
+--retry-max-time &lt;seconds&gt;  传输出现问题时，设置最大重试时间
+</code></pre><p>-s/–silent  静默模式。不输出任何东西</p>
+<p>-S/–show-error  显示错误</p>
+<pre><code>--socks4 &lt;host[:port]&gt; 用socks4代理给定主机和端口
+
+--socks5 &lt;host[:port]&gt; 用socks5代理给定主机和端口
+
+--stderr &lt;file&gt;
+</code></pre><p>-x/–proxy &lt;host[:port]&gt; 在给定的端口上使用HTTP代理</p>
+<p>-X/–request <command> 指定什么命令。curl默认的HTTP动词是GET，使用-X参数可以支持其他动词。</p>
+<p>-T/–upload-file <file> 指定上传文件路径</file></p>
+<p>（3）使用实例</p>
+<p>1、抓取cokkie信息到一个文件中</p>
+<p>curl -c cookie0.txt -d “username=<strong>*<em>&amp;password=</em></strong>“ <a href="http://www.kuaipan.cn/accounts/login/" target="_blank" rel="noopener">http://www.kuaipan.cn/accounts/login/</a></p>
+<p>2、get方法获取信息</p>
+<p>curl -G -I -o xsrf.txt -b cookie1.txt -c cookie2.txt <a href="http://web.kuaipan.cn/n/drive/home.tmpl/upload" target="_blank" rel="noopener">http://web.kuaipan.cn/n/drive/home.tmpl/upload</a></p>
 
       
     </div>
@@ -318,6 +383,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/the-introduction-of-HTTP/" rel="tag"># the introduction of HTTP</a>
+          
+        </div>
+      
 
       
       
@@ -327,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/15/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/12/18/基本命令行/" rel="next" title="基本命令行">
+                <i class="fa fa-chevron-left"></i> 基本命令行
               </a>
             
           </div>
@@ -337,7 +408,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/28/HTTP介绍/" rel="prev" title="HTTP介绍">
+              <a href="/2018/12/28/HTTP介绍-1/" rel="prev" title="HTTP介绍">
                 HTTP介绍 <i class="fa fa-chevron-right"></i>
               </a>
             
